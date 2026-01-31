@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		225B5FFD2F2E6E25000FE02B /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		225B5FFD2F2E6E25000FE02B /* PokedexApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokedexApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		225B5FFE2F2E6E25000FE02B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				225B5FFD2F2E6E25000FE02B /* Pokedex.app */,
+				225B5FFD2F2E6E25000FE02B /* PokedexApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +48,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		225B5FFC2F2E6E25000FE02B /* Pokedex */ = {
+		225B5FFC2F2E6E25000FE02B /* PokedexApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 225B600B2F2E6E27000FE02B /* Build configuration list for PBXNativeTarget "Pokedex" */;
+			buildConfigurationList = 225B600B2F2E6E27000FE02B /* Build configuration list for PBXNativeTarget "PokedexApp" */;
 			buildPhases = (
 				225B5FF92F2E6E25000FE02B /* Sources */,
 				225B5FFA2F2E6E25000FE02B /* Frameworks */,
@@ -63,11 +63,11 @@
 			fileSystemSynchronizedGroups = (
 				225B5FFF2F2E6E25000FE02B /* Pokedex */,
 			);
-			name = Pokedex;
+			name = PokedexApp;
 			packageProductDependencies = (
 			);
 			productName = Pokedex;
-			productReference = 225B5FFD2F2E6E25000FE02B /* Pokedex.app */;
+			productReference = 225B5FFD2F2E6E25000FE02B /* PokedexApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +85,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 225B5FF82F2E6E25000FE02B /* Build configuration list for PBXProject "Pokedex" */;
+			buildConfigurationList = 225B5FF82F2E6E25000FE02B /* Build configuration list for PBXProject "PokedexApp" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +99,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				225B5FFC2F2E6E25000FE02B /* Pokedex */,
+				225B5FFC2F2E6E25000FE02B /* PokedexApp */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		225B5FF82F2E6E25000FE02B /* Build configuration list for PBXProject "Pokedex" */ = {
+		225B5FF82F2E6E25000FE02B /* Build configuration list for PBXProject "PokedexApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				225B60092F2E6E27000FE02B /* Debug */,
@@ -312,7 +312,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		225B600B2F2E6E27000FE02B /* Build configuration list for PBXNativeTarget "Pokedex" */ = {
+		225B600B2F2E6E27000FE02B /* Build configuration list for PBXNativeTarget "PokedexApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				225B600C2F2E6E27000FE02B /* Debug */,

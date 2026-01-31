@@ -8,7 +8,7 @@
 import SwiftUI
 
 @MainActor
-struct PokemonListView: View {
+struct PokemonPageView: View {
     @StateObject private var viewModel = PokemonPageViewModel()
     
     var body: some View {
@@ -59,5 +59,5 @@ struct PokemonListView: View {
 }
 
 #Preview {
-    PokemonListView()
+    PokemonPageView()
 }

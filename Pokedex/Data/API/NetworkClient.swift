@@ -15,8 +15,8 @@ final class NetworkClient: NetworkClientProtocol {
         session: URLSession = .shared,
         decoder: JSONDecoder = JSONDecoder()
     ) {
-        self.self.session = session
-        self.self.decoder = decoder
+        self.session = session
+        self.decoder = decoder
     }
     
     func request<T: Decodable>(_ request: URLRequest) async throws -> T {

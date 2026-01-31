@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct PokemonResultPageView: View {
-    let pokemons: [PokemonListViewData]
+    let pokemons: [PokemonPageViewData]
     @Binding var isLoadingPage: Bool
-    let onAppearItem: (PokemonListViewData) -> Void
+    let onAppearItem: (PokemonPageViewData) -> Void
     
     private let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -53,7 +53,7 @@ struct PokemonResultPageView: View {
         
         var body: some View {
             PokemonResultPageView(
-                pokemons: PokemonListViewData.mockPokemonResult,
+                pokemons: PokemonPageViewData.mockPokemonResult,
                 isLoadingPage: $isLoadingPage,
                 onAppearItem: { _ in }
             )

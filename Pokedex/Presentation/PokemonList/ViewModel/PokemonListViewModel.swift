@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 final class PokemonListViewModel: ObservableObject {
     // Expostos para a View
-    @Published private(set) var pokemonsViewData: [PokemonListViewData] = []
+    @Published private(set) var pokemonsViewData: [PokemonPageViewData] = []
     @Published var searchQuery: String = ""
     @Published var isLoadingPage: Bool = false
     @Published private(set) var errorMessage: String?
@@ -50,7 +50,7 @@ final class PokemonListViewModel: ObservableObject {
         
         do {
             listState = try await loadPageUseCase.execute(state: listState)
-            pokemonsViewData = listState.items.map(PokemonListViewData.init(dto:))
+            pokemonsViewData = listState.items.map(PokemonPageViewData.init(dto:))
         } catch {
             errorMessage = "Falha ao carregar Pokemons. Tente novamente mais tarde."
         }
@@ -71,7 +71,7 @@ final class PokemonListViewModel: ObservableObject {
         await loadInitialPage()
     }
     
-    func onAppearItem(_ item: PokemonListViewData) async {
+    func onAppearItem(_ item: PokemonPageViewData) async {
         guard let last = pokemonsViewData.last, last.id == item.id else { return }
         await loadNextPage()
     }
@@ -98,7 +98,7 @@ final class PokemonListViewModel: ObservableObject {
             let result = try await searchUseCase.execute(query: query)
             listState.items = result
             listState.canLoadMore = false
-            pokemonsViewData = result.map(PokemonListViewData.init(dto:))
+            pokemonsViewData = result.map(PokemonPageViewData.init(dto:))
         } catch {
             listState.items = []
             pokemonsViewData = []

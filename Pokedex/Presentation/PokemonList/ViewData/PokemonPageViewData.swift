@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonListViewData: Identifiable {
+struct PokemonPageViewData: Identifiable {
     let id: Int
     let name: String
     let defaultSpriteURL: URL?
@@ -23,7 +23,7 @@ struct PokemonListViewData: Identifiable {
     }
 }
 
-extension PokemonListViewData {
+extension PokemonPageViewData {
     init(dto: PokemonPageItemDTO) {
         let trimmed = dto.url.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         let components = trimmed.split(separator: "/")
@@ -42,8 +42,8 @@ extension PokemonListViewData {
     }
 }
 
-extension PokemonListViewData {
-    static let mockPokemonItem = PokemonListViewData(
+extension PokemonPageViewData {
+    static let mockPokemonItem = PokemonPageViewData(
         id: 1,
         name: "Bulbasaur",
         defaultSpriteURL: URL(
@@ -52,19 +52,19 @@ extension PokemonListViewData {
     )
 }
 
-extension PokemonListViewData {
-    static let mockPokemonResult: [PokemonListViewData] = [
-        PokemonListViewData(
+extension PokemonPageViewData {
+    static let mockPokemonResult: [PokemonPageViewData] = [
+        PokemonPageViewData(
             id: 1,
             name: "Bulbasaur",
             defaultSpriteURL: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png")
         ),
-        PokemonListViewData(
+        PokemonPageViewData(
             id: 2,
             name: "Ivysaur",
             defaultSpriteURL: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png")
         ),
-        PokemonListViewData(
+        PokemonPageViewData(
             id: 3,
             name: "Venusaur",
             defaultSpriteURL: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png")

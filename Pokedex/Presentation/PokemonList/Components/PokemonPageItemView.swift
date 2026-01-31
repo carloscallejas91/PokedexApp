@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PokemonPageItemView: View {
-    let pokemon: PokemonListViewData
+    let pokemon: PokemonPageViewData
     
     var body: some View {
         ZStack {

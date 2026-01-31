@@ -16,7 +16,7 @@ final class PokemonListViewModel: ObservableObject {
     @Published private(set) var errorMessage: String?
     
     // Estado interno de domínio
-    private var listState = PokemonListState(
+    private var listState = PokemonPageState(
         items: [],
         offset: 0,
         limit: 20,
@@ -59,7 +59,7 @@ final class PokemonListViewModel: ObservableObject {
     }
     
     func refresh() async {
-        listState = PokemonListState(
+        listState = PokemonPageState(
             items: [],
             offset: 0,
             limit: listState.limit,

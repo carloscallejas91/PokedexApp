@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-final class PokemonListViewModel: ObservableObject {
+final class PokemonPageViewModel: ObservableObject {
     // Expostos para a View
     @Published private(set) var pokemonsViewData: [PokemonPageViewData] = []
     @Published var searchQuery: String = ""

@@ -9,7 +9,7 @@ import SwiftUI
 
 @MainActor
 struct PokemonListView: View {
-    @StateObject private var viewModel = PokemonListViewModel()
+    @StateObject private var viewModel = PokemonPageViewModel()
     
     var body: some View {
         NavigationStack {

@@ -22,7 +22,7 @@ struct PokemonResultPageView: View {
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(pokemons) { pokemon in
                     NavigationLink {
-                        // PokemonDetailView(pokemonID: pokemon.id)
+                        PokemonDetailView(pokemonID: pokemon.id)
                     } label: {
                         PokemonPageItemView(pokemon: pokemon)
                             .task {

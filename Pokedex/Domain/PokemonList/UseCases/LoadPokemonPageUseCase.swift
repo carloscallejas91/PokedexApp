@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoadPokemonPageUseCaseProtocol {
-    func execute(state: PokemonListState) async throws -> PokemonListState
+    func execute(state: PokemonPageState) async throws -> PokemonPageState
 }
 
 final class LoadPokemonPageUseCase: LoadPokemonPageUseCaseProtocol {
@@ -18,7 +18,7 @@ final class LoadPokemonPageUseCase: LoadPokemonPageUseCaseProtocol {
         self.repository = repository
     }
     
-    func execute(state: PokemonListState) async throws -> PokemonListState {
+    func execute(state: PokemonPageState) async throws -> PokemonPageState {
         guard !state.isSearching, state.canLoadMore else { return state }
         
         let response = try await repository.fetchPokemonPage(

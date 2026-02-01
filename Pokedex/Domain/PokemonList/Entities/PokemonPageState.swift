@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PokemonListState {
+struct PokemonPageState {
     var items: [PokemonPageItemDTO]
     var offset: Int
     var limit: Int

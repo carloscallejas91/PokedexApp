@@ -112,3 +112,73 @@ extension PokemonDetailViewData {
         self.sprites = dto.sprites
     }
 }
+
+extension PokemonDetailViewData {
+    static let mockPokemonDetail = PokemonDetailViewData(
+        id: 214,
+        name: "Ditto",
+        weight: 40,
+        height: 3,
+        abilities: [
+            PokemonAbilitySlotDTO(
+                ability: NamedAPIResourceDTO(
+                    name: "limber",
+                    url: "https://pokeapi.co/api/v2/ability/7/"
+                ),
+                isHidden: false,
+                slot: 1
+            )
+        ],
+        types: [
+            PokemonTypeSlotDTO(
+                slot: 1,
+                type: NamedAPIResourceDTO(
+                    name: "normal",
+                    url: "https://pokeapi.co/api/v2/type/1/"
+                )
+            )
+        ],
+        stats: [
+            PokemonStatsSlotDTO(
+                stat: NamedAPIResourceDTO(
+                    name: "hp",
+                    url: "https://pokeapi.co/api/v2/stat/1/"
+                ),
+                baseStat: 48
+            )
+        ],
+        sprites: PokemonSpritesDTO(
+            other: PokemonOtherSpritesDTO(
+                officialArtwork: PokemonOfficialArtworkSpritesDTO(
+                    frontDefault: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
+                    frontFemale: "",
+                    frontShiny: "",
+                    frontShinyFemale: ""
+                )
+            )
+        )
+    )
+}
+
+extension PokemonSpritesDTO {
+    static let mockPokemonSprites = PokemonSpritesDTO(
+        other: PokemonOtherSpritesDTO(
+            officialArtwork: PokemonOfficialArtworkSpritesDTO(
+                frontDefault: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
+                frontFemale: "",
+                frontShiny: "",
+                frontShinyFemale: ""
+            )
+        )
+    )
+}
+
+extension PokemonStatsSlotDTO {
+    static let mockPokemonStats = PokemonStatsSlotDTO(
+        stat: NamedAPIResourceDTO(
+            name: "hp",
+            url: "https://pokeapi.co/api/v2/stat/1/"
+        ),
+        baseStat: 48
+    )
+}
